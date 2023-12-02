@@ -1,26 +1,97 @@
-<div class="vapor">
-    <div class="sky">
-      <h1>almost there</h1>
-      <div class="sun"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gamepad</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    .gamepad {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 4px solid #fff;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #000;
+      box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .horizontal-buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button {
+      font-size: 30px;
+      padding: 20px 30px;
+      margin: 15px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      background-color: transparent;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+    }
+
+    #button-up {
+      border-color: #f1c40f;
+    }
+
+    #button-down {
+      border-color: #e74c3c;
+    }
+
+    #button-left,
+    #button-right {
+      border-color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+  <div class="gamepad">
+    <button class="button" id="button-up">▲</button>
+    <div class="horizontal-buttons">
+      <button class="button" id="button-left">◄</button>
+      <button class="button" id="button-right">►</button>
     </div>
-  
-    <div class="ground">
-      <div class="haze"></div>
-      <img class="palm" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/palmtree.png" alt="A palm tree." />
-      <img class="palmrev" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/palmtree.png" alt="Another palm tree." />
-      <div class="car">
-        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/209305/spooky-skeletal.gif" alt="spooky skeleton" />
-      </div>
-      <div class="grid-container">
-        <div class="grid" id="grid"></div>
-      </div>
-    </div>
+    <button class="button" id="button-down">▼</button>
   </div>
   
-  <div class="sound-wrapper">
-    <div class="emoji-toggle emoji-happy">
-      <input type="checkbox" id="sound" class="toggle" onchange="myfunction(this)">
-      <div class="emoji"></div>
-      <label for="sound" class="well"></label>
-    </div>
-  </div>
+  <script>
+    // Manejo de eventos de clic para cada botón
+    document.getElementById('button-up').addEventListener('click', function() {
+      console.log('Botón arriba presionado');
+      // Agregar lógica para acciones cuando se presiona el botón hacia arriba
+    });
+
+    document.getElementById('button-down').addEventListener('click', function() {
+      console.log('Botón abajo presionado');
+      // Agregar lógica para acciones cuando se presiona el botón hacia abajo
+    });
+
+    document.getElementById('button-left').addEventListener('click', function() {
+      console.log('Botón izquierda presionado');
+      // Agregar lógica para acciones cuando se presiona el botón hacia la izquierda
+    });
+
+    document.getElementById('button-right').addEventListener('click', function() {
+      console.log('Botón derecha presionado');
+      // Agregar lógica para acciones cuando se presiona el botón hacia la derecha
+    });
+  </script>
+</body>
+</html>
